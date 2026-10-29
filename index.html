@@ -409,19 +409,110 @@ footer{padding:30px 5vw;background:var(--ink);color:rgba(242,237,226,0.4);font-s
 @keyframes execContinuousScrollReverse{from{transform:translateX(-50%)}to{transform:translateX(0)}}
 @media(prefers-reduced-motion:reduce){#executed .exec-project-media .exec-carousel-track{animation:none!important;transform:none!important;}}
 
+
+/* ---------- MOBILE / RESPONSIVE POLISH ---------- */
+@media (max-width: 860px){
+  .topnav{padding:16px 20px;}
+  .topnav.scrolled{padding:12px 20px;}
+  .brand{font-size:1rem;}
+  .navtoggle{display:flex;align-items:center;justify-content:center;width:42px;height:42px;font-size:1.35rem;color:var(--paper);border:1px solid var(--line-dark);border-radius:50%;z-index:102;}
+  .navlinks{position:absolute;top:100%;left:12px;right:12px;display:flex;flex-direction:column;gap:0;padding:8px;background:rgba(20,19,15,.98);border:1px solid var(--line-dark);box-shadow:0 18px 40px rgba(0,0,0,.28);opacity:0;visibility:hidden;transform:translateY(-8px);pointer-events:none;transition:opacity .2s ease,transform .2s ease,visibility .2s ease;}
+  .topnav.menu-open .navlinks{opacity:1;visibility:visible;transform:none;pointer-events:auto;}
+  .navlinks a{display:block;padding:15px 14px;font-size:.7rem;border-bottom:1px solid rgba(201,160,102,.12);}
+  .navlinks a:last-child{border-bottom:0;}
+  .hero{height:100svh;min-height:620px;}
+  .hero img{object-position:center center;}
+  .hero-content{padding:0 20px 64px;max-width:100%;}
+  .hero-content .eyebrow{font-size:.58rem;line-height:1.7;letter-spacing:.12em;max-width:32ch;display:block;}
+  .hero-content h1{font-size:clamp(3rem,15vw,5rem);margin:10px 0 14px;}
+  .hero-content p{font-size:.92rem;line-height:1.55;max-width:40ch;}
+  .hero-scroll{display:none;}
+  section{padding:72px 20px;}
+  .section-head{margin-bottom:38px;}
+  .section-head h2{font-size:clamp(1.8rem,9vw,2.5rem);line-height:1.08;}
+  .section-head p{font-size:.92rem;line-height:1.65;}
+  .about-wrap,.dual{grid-template-columns:1fr;gap:42px;}
+  .about-copy p:first-of-type{font-size:1.25rem;line-height:1.45;}
+  .about-copy p{font-size:.98rem;line-height:1.7;}
+  .contact-strip{margin-top:28px;padding-top:22px;}
+  .contact-strip .row{display:grid;grid-template-columns:72px minmax(0,1fr);gap:10px;font-size:.86rem;}
+  .contact-strip .row span{min-width:0;overflow-wrap:anywhere;}
+  .credentials{width:100%;}
+  .cred-row{padding:15px 16px;gap:16px;font-size:.82rem;align-items:flex-start;}
+  .cred-row span:last-child{text-align:right;max-width:62%;}
+  .tag-grid{gap:8px;}
+  .tag{padding:9px 12px;font-size:.78rem;}
+  .ext-grid{grid-template-columns:1fr;}
+  .ext-media{aspect-ratio:4/3;}
+  .title-block{padding:18px 18px 22px;}
+  .tb-row{gap:10px;margin-bottom:8px;}
+  .title-block h3{font-size:1.08rem;line-height:1.2;}
+  .tb-hint{font-size:.58rem;}
+  .filter-bar{gap:7px;margin-bottom:30px;overflow-x:auto;flex-wrap:nowrap;padding-bottom:5px;scrollbar-width:none;-webkit-overflow-scrolling:touch;}
+  .filter-bar::-webkit-scrollbar{display:none;}
+  .filter-btn{flex:0 0 auto;padding:10px 14px;font-size:.65rem;}
+  .int-blocks{gap:36px;}
+  .int-block-head{padding:18px 18px;gap:10px;}
+  .int-block-head h3{font-size:1.05rem;}
+  .int-block-head .tb-hint{font-size:.56rem;}
+  .int-slider{aspect-ratio:4/3;}
+  .int-slider .m-prev,.int-slider .m-next{width:38px;height:38px;font-size:1.15rem;}
+  .int-slider .m-prev{left:9px}.int-slider .m-next{right:9px}
+  .balcony-feature{grid-template-columns:1fr;margin-top:40px;}
+  .balcony-copy{padding:30px 22px;}
+  .balcony-copy h3{font-size:1.4rem;}
+  .balcony-media{aspect-ratio:4/3;}
+  #executed #execProjectGrid.exec-project-grid{grid-template-columns:1fr;gap:2px;}
+  #executed .exec-project-media{aspect-ratio:1.45/1;}
+  #executed .exec-project-title{font-size:.62rem;}
+  .process-line{margin-right:-20px;padding-right:20px;}
+  .proc-step{min-width:185px;padding-right:20px;}
+  .contact-hero{min-height:680px;}
+  .contact-inner{padding:0 20px !important;max-width:100%;}
+  .contact-inner h2{font-size:clamp(2rem,11vw,3rem);}
+  .contact-inner .tagline{font-size:1.15rem;line-height:1.4;margin-bottom:30px;}
+  .contact-rows{display:grid;grid-template-columns:1fr;gap:22px;}
+  .contact-rows .row span{font-size:.98rem;overflow-wrap:anywhere;}
+  footer{padding:22px 20px;display:flex;flex-direction:column;gap:10px;font-size:.62rem;line-height:1.5;}
+  .lightbox-overlay{padding:14px;align-items:center;}
+  .lightbox-box{width:100%;max-height:94svh;grid-template-columns:1fr;overflow-y:auto;}
+  .lightbox-media{min-height:42vh;max-height:54vh;}
+  .lightbox-media img{max-height:54vh;}
+  .lightbox-info{padding:26px 22px 30px;}
+  .lightbox-info h3{font-size:1.4rem;}
+  .lightbox-close{top:10px;right:10px;width:36px;height:36px;}
+}
+@media (max-width:420px){
+  .hero-content{padding-bottom:52px;}
+  section{padding-left:16px;padding-right:16px;}
+  .topnav{padding-left:16px;padding-right:16px;}
+  .topnav.scrolled{padding-left:16px;padding-right:16px;}
+  .navlinks{left:8px;right:8px;}
+  .cred-row{display:grid;grid-template-columns:1fr;gap:5px;}
+  .cred-row span:last-child{text-align:left;max-width:none;}
+  .ext-media{aspect-ratio:1/1;}
+  .int-slider{aspect-ratio:1/1;}
+  .contact-hero{min-height:650px;}
+}
+@media (hover:none){
+  .ext-card:hover .ext-media img{transform:none;}
+  .navlinks a:hover{color:inherit;opacity:.75;}
+}
+
 </style>
 </head>
 <body>
 
 <nav class="topnav scrolled" id="topnav">
   <div class="brand">ULLAS <b>SP</b></div>
+  <button class="navtoggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
   <div class="navlinks">
-    <a href="file:///C:/Users/ullas/Downloads/Ullas_Portfolio_Editable/index_executed_fit_entire_photo.html#about">About</a>
-    <a href="file:///C:/Users/ullas/Downloads/Ullas_Portfolio_Editable/index_executed_fit_entire_photo.html#exterior">Exterior</a>
-    <a href="file:///C:/Users/ullas/Downloads/Ullas_Portfolio_Editable/index_executed_fit_entire_photo.html#interior">Interior</a>
-    <a href="file:///C:/Users/ullas/Downloads/Ullas_Portfolio_Editable/index_executed_fit_entire_photo.html#executed">Executed</a>
-    <a href="file:///C:/Users/ullas/Downloads/Ullas_Portfolio_Editable/index_executed_fit_entire_photo.html#process">Process</a>
-    <a href="file:///C:/Users/ullas/Downloads/Ullas_Portfolio_Editable/index_executed_fit_entire_photo.html#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="#exterior">Exterior</a>
+    <a href="#interior">Interior</a>
+    <a href="#executed">Executed</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Contact</a>
   </div>
   </nav>
 
@@ -1010,6 +1101,24 @@ Open Workspace – Concept Design" loading="lazy"></div><div class="int-tile" da
 </div>
 
 <script>
+// mobile navigation
+const navToggle = document.getElementById('navToggle');
+const topNav = document.getElementById('topnav');
+if (navToggle && topNav) {
+  navToggle.addEventListener('click', () => {
+    const open = topNav.classList.toggle('menu-open');
+    navToggle.setAttribute('aria-expanded', String(open));
+    navToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    navToggle.textContent = open ? '×' : '☰';
+  });
+  topNav.querySelectorAll('.navlinks a').forEach(link => link.addEventListener('click', () => {
+    topNav.classList.remove('menu-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', 'Open navigation');
+    navToggle.textContent = '☰';
+  }));
+}
+
 // nav scroll state
 const topnav = document.getElementById('topnav');
 window.addEventListener('scroll', () => {
